@@ -31,3 +31,7 @@ footer {
 .list-group-item {
 	color: black;
 }
+
+.btn-warning {
+	margin-right: 5px;
+}
