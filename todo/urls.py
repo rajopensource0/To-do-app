@@ -1,10 +1,16 @@
 
 from django.urls import path, include
-from . import views
+from .views import (
+		add_todo,
+		complete_todo,
+		delete_completed,
+		delete_all,
+		index
+	)
 urlpatterns = [
-    path('', views.index, name = 'index'),
-    path('add',views.addTodo, name = 'add'),
-    path('complete/<todo_id>', views.completeTodo, name = 'complete'),
-    path('deletecomplete', views.deleteCompleted, name = 'deletecomplete'),
-path('deleteall', views.deleteAll, name = 'deleteall')
+    path('', index, name = 'index'),
+    path('add', add_todo, name = 'add'),
+    path('complete/<todo_id>', complete_todo, name = 'complete'),
+    path('deletecomplete', delete_completed, name = 'deletecomplete'),
+path('deleteall', delete_all, name = 'deleteall')
 ]

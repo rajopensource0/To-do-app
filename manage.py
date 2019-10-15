@@ -18,4 +18,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except:
+        print("Server is exited unexpectedly. Please contact server admin.")
