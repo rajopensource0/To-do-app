@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%%(qol66ho#+x1p9peq3r@97v6yo48i-go$g)sjz6_2*$s=foq'
+SECRET_KEY = SECRET_KEYS
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['amanjhurani.pythonanywhere.com', '127.0.0.1']
 
@@ -117,6 +117,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 #STATIC_ROOT= os.path.join(BASE_DIR,'/static/') to be used during prodiction
