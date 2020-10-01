@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from  django.views.decorators.http import require_POST
-# Create your views here.
 from .forms import TodoForm
 from .models import Todo
 
@@ -38,5 +37,10 @@ def delete_all(request):
     Todo.objects.all().delete()
 
     return redirect('index')
+
+def delete(request):
+    Todo.objects.all().delete()
+
+    return redirect('index', context)
 
 
